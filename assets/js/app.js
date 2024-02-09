@@ -51,19 +51,20 @@ const products = [
     }
 ];
 
-console.log(products);
 const product_items = document.querySelector(".product_grid");
 const navmenu = document.querySelector("#nav_menu");
 const menu = document.querySelector(".hamburger");
 const cart_menu = document.querySelector(".cart_menu");
 const Cart_sect = document.querySelector(".cart_section");
 const check_btn = document.querySelector(".checkout");
+const cartItems = document.querySelector(".cart_item");
+const totalPrice = document.querySelector(".total");
 
 // global variables
 let cart = [];
 let i = 0;
 let j = 0;
-let total = 0;
+
 
 
 // Add an eventListener to the hamburger menu
@@ -80,7 +81,7 @@ cart_menu.addEventListener("click", ()=>{
 // Mapping through the product array to display the items on the DOM
 
 const products_data = products.map((item)=>{
-    const {img, title, price} = item;
+    var {img, title, price} = item;
     return (
         `<div class="row_col">
         <div class="image">
@@ -116,17 +117,48 @@ const products_data = products.map((item)=>{
 product_items.innerHTML = products_data;
 
 // function to Add to cart
+
 const AddTocart = (a)=>{
     cart.push({...products[a]});
+    showCart();
 };
 
 // function to display cart
 const showCart = ()=>{
     // shows the number of item added to the cart
+    let total = 0;
     document.getElementById("count").innerHTML = cart.length;
     // if the cart is empty show this
     if(cart.length == 0) {
-        document.getElementById("cart_text").innerHTML = "Your Cart is Empty";
+        cartItems.innerHTML = "Your Cart is Empty";
         check_btn.classList.add("hide");
+    } else {
+        cartItems.innerHTML = cart.map((item)=>{
+            var {img, title, price, index} = item
+            total = total + price;
+            totalPrice.innerHTML = `$${total}.00`;
+            return(
+                ` <div class="cart_inner flex">
+                <img src=${img} />
+                <p>${title}</p>
+                <h2>$${price}</h2>
+                <i class='bx bxs-trash' onclick= "deleteItem(${index})"></i>
+            </div>`
+            )
+        }).join('')
+        
+    }
+}
+
+const deleteItem = (id)=>{
+    let confirmdel = confirm("are you sure you want to delete this item");
+
+    if(!confirmdel){
+        return false;
+    }
+    cart.splice(id, 1);
+    showCart();
+    if(cart.length == 0){
+        totalPrice.innerHTML = "0.00";
     }
 }
