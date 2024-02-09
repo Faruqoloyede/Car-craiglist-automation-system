@@ -197,7 +197,7 @@ span {
 
 .other i {
     color: var(--text-color);
-    font-size: 2.3rem;
+    font-size: 2.5rem;
     font-weight: bold;
     cursor: pointer;
 }
@@ -254,6 +254,10 @@ span {
 }
 
 @media (max-width: 991px) {
+
+    .header {
+        padding-top: 1.2rem;
+    }
 
     .nav_menu {
         position: fixed;
@@ -1034,4 +1038,135 @@ span {
 
 .input_group button i {
     font-size: 2rem;
+}
+
+/*=== MEDIAQUERY === */
+
+@media (max-width: 680px) {
+    .footer_grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*=== CART SECTION === */
+
+.cart_section {
+    position: absolute;
+    background-color: var(--white-color);
+    height: 800px;
+    width: 500px;
+    top: 60px;
+    right: 0;
+    padding: 2rem;
+    text-align: center;
+    transition: .4s ease-in-out;
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.total_grid {
+    justify-content: space-between;
+    border-bottom: 1px solid var(--para-color);
+    padding-bottom: 2rem;
+}
+
+.total_grid p {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.total_grid .total {
+    color: var(--main-color);
+}
+
+.cart_inner {
+    justify-content: space-between;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+.cart_inner img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 1.5rem;
+    border: 1px solid var(--main-color);
+}
+
+.cart_inner p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.cart_inner h2 {
+    color: var(--main-color);
+}
+
+.cart_inner i {
+    font-size: 2.5rem;
+    color: var(--main-color);
+    cursor: poi;
+}
+
+.checkout {
+    background-color: var(--main-color);
+    color: var(--white-color);
+    font-size: 2rem;
+    padding: 0.8rem 2.8rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.checkout:hover {
+    background-color: var(--text-color);
+}
+
+.checkout.hide {
+    display: none;
+}
+
+.cart_text {
+    font-size: 2rem;
+}
+/*=== MEDIAQUERY === */
+
+@media (max-width: 680px) {
+    .cart_section {
+        width: 100%;
+        height: 100vh;
+        z-index: 1000;
+        top: 50px;
+        padding: 1.5rem;
+    }
+
+    .total_grid p {
+        font-size: 1.5rem;
+    }
+
+    .cart_inner {
+        padding: 1rem 0;
+    }
+
+    .cart_inner img {
+        width: 70px;
+        height: 70px;
+        padding: 0.5rem;
+    }
+
+    .cart_inner p {
+        font-size: 1rem;
+    }
+
+    .cart_inner i {
+        font-size: 2rem;
+    }
+
+    .cart_inner h2 {
+        font-size: 1.5rem;
+    }
 }

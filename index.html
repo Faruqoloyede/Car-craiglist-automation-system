@@ -58,8 +58,8 @@
             <div class="other">
                 <span><i class='bx bx-search'></i></span>
                 <div class="cart">
-                    <!-- <div class="count">5</div> -->
-                    <span><i class='bx bx-cart-download'></i></span>
+                    <div class="count" id="count"></div>
+                    <span><i class='bx bxs-cart cart_menu'></i></span>
                 </div>
                 <!-- HAMBURGER -->
                 <button id="menu_btn" class="hamburger">
@@ -67,6 +67,16 @@
                     <span class="hamburger-middle"></span>
                     <span class="hamburger-bottom"></span>
                 </button>
+            </div>
+            <div class="cart_section">
+                <div class="total_grid flex">
+                    <p>total</p>
+                    <p class="total">$4000</p>
+                </div>
+                <div class="cart_item">
+                    <div class="cart_text" id="cart_text"></div>
+                </div>
+                <button type="button" class="checkout">checkout</button>
             </div>
     </header>
 
@@ -165,231 +175,7 @@
             <div class="container">
                 <h4><i class='bx bx-car'></i>new arrivals</h4>
                 <h1>let's check latest <span>cars</span></h1>
-                <div class="product_grid grid">
-                    <div class="row_col">
-                        <div class="image">
-                            <img src="assets/img/arrival/01.jpg">
-                        </div>
-                        <div class="prod_inner">
-                            <h5>mercedes benz car</h5>
-                            <div class="rating">
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <span>5.0 (58.5k Review)</span>
-                            </div>
-                            <div class="features">
-                                <span><i class="bx bx-error-circle"></i> Automatic</span>
-                                <span><i class="bx bx-label"></i> 10.15km/ 1-litre</span>
-                                <span><i class='bx bx-car'></i> Model: 2023</span>
-                                <span><i class='bx bx-target-lock'></i> Hybrid</span>
-                            </div>
-                            <div class="line"></div>
-                            <div class="price flex">
-                                <span>$45,620</span>
-                                <button class="add">Add to cart</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row_col">
-                        <div class="image">
-                            <img src="assets/img/arrival/02.jpg">
-                        </div>
-                        <div class="prod_inner">
-                            <h5>yellow ferrari 458</h5>
-                            <div class="rating">
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <span>5.0 (58.5k Review)</span>
-                            </div>
-                            <div class="features">
-                                <span><i class="bx bx-error-circle"></i> Automatic</span>
-                                <span><i class="bx bx-label"></i> 10.15km/ 1-litre</span>
-                                <span><i class='bx bx-car'></i> Model: 2023</span>
-                                <span><i class='bx bx-target-lock'></i> Hybrid</span>
-                            </div>
-                            <div class="line"></div>
-                            <div class="price flex">
-                                <span>$90,250</span>
-                                <button class="add">Add to cart</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row_col">
-                        <div class="image">
-                            <img src="assets/img/arrival/03.jpg">
-                        </div>
-                        <div class="prod_inner">
-                            <h5>black audi Q7</h5>
-                            <div class="rating">
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <span>5.0 (58.5k Review)</span>
-                            </div>
-                            <div class="features">
-                                <span><i class="bx bx-error-circle"></i> Automatic</span>
-                                <span><i class="bx bx-label"></i> 10.15km/ 1-litre</span>
-                                <span><i class='bx bx-car'></i> Model: 2023</span>
-                                <span><i class='bx bx-target-lock'></i> Hybrid</span>
-                            </div>
-                            <div class="line"></div>
-                            <div class="price flex">
-                                <span>$44,350</span>
-                                <button class="add">Add to cart</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row_col">
-                        <div class="image">
-                            <img src="assets/img/arrival/04.jpg">
-                        </div>
-                        <div class="prod_inner">
-                            <h5>BMW sports car</h5>
-                            <div class="rating">
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <span>5.0 (58.5k Review)</span>
-                            </div>
-                            <div class="features">
-                                <span><i class="bx bx-error-circle"></i> Automatic</span>
-                                <span><i class="bx bx-label"></i> 10.15km/ 1-litre</span>
-                                <span><i class='bx bx-car'></i> Model: 2023</span>
-                                <span><i class='bx bx-target-lock'></i> Hybrid</span>
-                            </div>
-                            <div class="line"></div>
-                            <div class="price flex">
-                                <span>$78,760</span>
-                                <button class="add">Add to cart</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row_col">
-                        <div class="image">
-                            <img src="assets/img/arrival/05.jpg">
-                        </div>
-                        <div class="prod_inner">
-                            <h5>white tesla car</h5>
-                            <div class="rating">
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <span>5.0 (58.5k Review)</span>
-                            </div>
-                            <div class="features">
-                                <span><i class="bx bx-error-circle"></i> Automatic</span>
-                                <span><i class="bx bx-label"></i> 10.15km/ 1-litre</span>
-                                <span><i class='bx bx-car'></i> Model: 2023</span>
-                                <span><i class='bx bx-target-lock'></i> Hybrid</span>
-                            </div>
-                            <div class="line"></div>
-                            <div class="price flex">
-                                <span>$78,760</span>
-                                <button class="add">Add to cart</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row_col">
-                        <div class="image">
-                            <img src="assets/img/arrival/06.jpg">
-                        </div>
-                        <div class="prod_inner">
-                            <h5>white nissan car</h5>
-                            <div class="rating">
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <span>5.0 (58.5k Review)</span>
-                            </div>
-                            <div class="features">
-                                <span><i class="bx bx-error-circle"></i> Automatic</span>
-                                <span><i class="bx bx-label"></i> 10.15km/ 1-litre</span>
-                                <span><i class='bx bx-car'></i> Model: 2023</span>
-                                <span><i class='bx bx-target-lock'></i> Hybrid</span>
-                            </div>
-                            <div class="line"></div>
-                            <div class="price flex">
-                                <span>$78,760</span>
-                                <button class="add">Add to cart</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row_col">
-                        <div class="image">
-                            <img src="assets/img/arrival/07.jpg">
-                        </div>
-                        <div class="prod_inner">
-                            <h5>mercedes benz SUV</h5>
-                            <div class="rating">
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <span>5.0 (58.5k Review)</span>
-                            </div>
-                            <div class="features">
-                                <span><i class="bx bx-error-circle"></i> Automatic</span>
-                                <span><i class="bx bx-label"></i> 10.15km/ 1-litre</span>
-                                <span><i class='bx bx-car'></i> Model: 2023</span>
-                                <span><i class='bx bx-target-lock'></i> Hybrid</span>
-                            </div>
-                            <div class="line"></div>
-                            <div class="price flex">
-                                <span>$78,760</span>
-                                <button class="add">Add to cart</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row_col">
-                        <div class="image">
-                            <img src="assets/img/arrival/08.jpg">
-                        </div>
-                        <div class="prod_inner">
-                            <h5>red hyundai car</h5>
-                            <div class="rating">
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <span>5.0 (58.5k Review)</span>
-                            </div>
-                            <div class="features">
-                                <span><i class="bx bx-error-circle"></i> Automatic</span>
-                                <span><i class="bx bx-label"></i> 10.15km/ 1-litre</span>
-                                <span><i class='bx bx-car'></i> Model: 2023</span>
-                                <span><i class='bx bx-target-lock'></i> Hybrid</span>
-                            </div>
-                            <div class="line"></div>
-                            <div class="price flex">
-                                <span>$78,760</span>
-                                <button class="add">Add to cart</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div class="product_grid grid"></div>
             </div>
         </section>
 
@@ -461,7 +247,7 @@
                         <p>Subscribe To Our Newsletter To Get Latest Update And News</p>
                         <div class="input_group">
                             <input type="text" placeholder="Your Email">
-                            <button class="sub" type="button">Subscribe Now <i class='bx bx-paper-plane' ></i></button>
+                            <button class="sub" type="button">Subscribe Now <i class='bx bx-paper-plane' ></i> </button>
                         </div>
                     </div>
                 </div>
